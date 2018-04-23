@@ -3,8 +3,8 @@ var mongoose = require("mongoose");
 var exphbs = require("express-handlebars");
 var bodyParser = require("body-parser");
 
-// Set port to 3001
-var PORT = 3001;
+// Set port to 3001 or whatever heroku wants to use
+var PORT = process.env.PORT || 3001;
 
 // Initialize the app
 var app = express();
