@@ -2,7 +2,7 @@ $(document).ready(function() {
   // Handle on-click functions
   var articleContainer = $(".article-container");
   $(document).on("click", ".btn.save", articleSave);
-  $(document).on("click", ".start-scrape", articleScrape);
+  $(document).on("click", ".scrape", articleScrape);
 
   // load page
   start();

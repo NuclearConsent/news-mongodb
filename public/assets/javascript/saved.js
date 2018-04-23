@@ -3,6 +3,8 @@ $(document).ready(function() {
   // Handle on-click events
   $(document).on("click", ".delete", deleteArticle);
   $(document).on("click", ".comments", commentArticle);
+  $(document).on("click", ".scrape", articleScrape);
+
 
   // Gotta start somewhere..
   start();
@@ -85,4 +87,11 @@ $(document).ready(function() {
     alert("Just imagine this is a beautiful comment section...  You have to believe... I've seriously spent way too much time on this to find out that bootbox is not available for bootstrap 4 so I've ran out of steam..");
   }
 
+  // Run api/fetch
+  function articleScrape() {
+    $.get("/api/fetch").then(function(data) {
+      // Start again.. lol
+      start();
+    });
+  }
 });
